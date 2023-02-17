@@ -1,7 +1,8 @@
-import mongoose from "mongoose";
-// @ts-ignore
+import mongoose, { Types, InferSchemaType } from "mongoose";
 import mongooseSequence from "mongoose-sequence";
+
 const connection = mongoose.createConnection(process.env.DATABASE_URL!);
+
 const NoteSchema = new mongoose.Schema(
   {
     title: {
@@ -26,8 +27,7 @@ const NoteSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
-var AutoIncrement = mongooseSequence(NoteSchema);
 
-NoteSchema.plugin(function () {});
+export type NoteTypes = InferSchemaType<typeof NoteSchema>;
 
-export default mongoose.models.Note || mongoose.model("Note", NoteSchema);
+export default mongoose.model<NoteTypes>("Note", NoteSchema);

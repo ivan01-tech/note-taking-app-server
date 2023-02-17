@@ -3,13 +3,13 @@ import express from "express";
 import { join } from "node:path";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-
 import rootRouter from "./routes/root.js";
 import { logger } from "./middleware/logger.js";
 import errLogger from "./middleware/errLogger.js";
 import { corsOptions } from "./config/corsCongif.js";
 import mongoose from "mongoose";
 import dbConnection from "./config/dbConnection.js";
+import userRoute from "./routes/userRoute.js";
 
 // env
 dotenv.config({ path: join(process.cwd(), "src", ".env") });
@@ -38,6 +38,8 @@ app.use("/", express.static(join(process.cwd(), "src", "public")));
 
 // root router
 app.use("/", rootRouter);
+// user router
+app.use("/users", userRoute);
 
 // catch all routes
 app.all("/*", function (req, res) {

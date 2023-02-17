@@ -1,5 +1,12 @@
-import mongoose from "mongoose";
-import { userRoles } from "../constants";
+import mongoose, { InferSchemaType } from "mongoose";
+import { userRoles } from "../constants.js";
+
+// export interface UserTypes {
+//   username: string;
+//   password: string;
+//   active: boolean;
+//   roles: string[];
+// }
 
 const UserSchema = new mongoose.Schema({
   username: {
@@ -22,4 +29,6 @@ const UserSchema = new mongoose.Schema({
   ],
 });
 
-export default mongoose.models.User || mongoose.model("User", UserSchema);
+export type UserTypes = InferSchemaType<typeof UserSchema>;
+
+export default mongoose.model<UserTypes>("User", UserSchema);
