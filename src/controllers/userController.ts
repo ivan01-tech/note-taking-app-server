@@ -115,7 +115,7 @@ const updateUser = async function (req: Request, res: Response) {
     const NewUpt = await user.save();
     res
       .status(200)
-      .send({ message: "User updatesd with username" + NewUpt.username });
+      .json({ message: "User updated with username " + NewUpt.username });
   } catch (err) {}
 };
 

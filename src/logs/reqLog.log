@@ -16,3 +16,12 @@
 2023;02;17;07;11;09	3856901d-1073-4ed1-84f3-ef8d76045515	GET	/	https://www.google.com
 2023;02;17;07;11;24	8db8b75f-5f01-4f70-90aa-d694711e0190	OPTIONS	/	https://www.google.com
 2023;02;17;07;11;24	25373716-2b04-42a7-93e2-5bf5dd4b2c95	GET	/	https://www.google.com
+2023;02;18;08;33;07	397ce58d-91b0-4bee-accc-f16a4f7c299a	GET	/users	undefined
+2023;02;18;08;35;51	9bb636d6-1fb3-4b8a-bb5e-635af2108f49	POST	/users	undefined
+2023;02;18;08;37;13	15ab4434-f01c-4bcb-9718-956eb3508f4a	POST	/users	undefined
+2023;02;18;08;37;34	9e80327d-342e-4a68-8e81-b4fd33d3c484	GET	/users	undefined
+2023;02;18;08;40;07	87903426-a930-43ef-b437-821480a5a3b3	PATCH	/users	undefined
+2023;02;18;08;40;30	1fb079bc-8587-46b4-9497-424344c3cbde	PATCH	/users	undefined
+2023;02;18;08;41;39	0d46ac95-f36f-4dd0-bef8-f9d705d7f254	PATCH	/users	undefined
+2023;02;18;08;41;46	b4f228f4-a9ea-40b3-ab12-290dac9ef59e	PATCH	/users	undefined
+2023;02;18;08;42;02	f3c6b863-99ac-4b76-8e86-afc7d5689581	GET	/users	undefined
